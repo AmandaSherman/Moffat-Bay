@@ -20,6 +20,7 @@
   height: 60vh;
   margin-bottom: 10px;
   text-align: center;
+  border: solid 1px #595959;
 }
 
 #banner {
@@ -59,6 +60,7 @@
   flex: 1;
   margin: 1px;
   background-color: #80A6A2;
+  border: solid 1px #595959;
 }
 
 #navigationbar a {
