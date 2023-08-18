@@ -37,7 +37,7 @@
 }
 
 #lookuplink a, #accountlinks a {
-  color: #402d24;
+  color: #595959;
   font-weight: bold;
   padding: 14px 16px;
   text-decoration-line: none;
@@ -45,20 +45,20 @@
 
 #lookuplink a:hover, #accountlinks a:hover {
   text-decoration-line: underline;
-  background-color: #7f6f62;
+  background-color: #80A6A2;
   color: #CEC2B8;
 }
 
 #navigationbar {
   display: flex;
-  background-color: #f1e5d8;
+  background-color: #F2F0E9;
   margin-bottom: 10px;
 }
 
 #nav1, #nav2, #nav3, #nav4 {
   flex: 1;
   margin: 1px;
-  background-color: #7F6F62;
+  background-color: #80A6A2;
 }
 
 #navigationbar a {
@@ -72,29 +72,29 @@
 
 #navigationbar a:hover {
   background-color: #CEC2B8;
-  color: #7F6F62;
+  color: #80A6A2;
 }
 
 body {
-  background-color: #f1e5d8;
+  background-color: #F2F0E9;
   /* background-color: #6096aa;
   background-color: #29738f;
   background-color: #cec2b8;
-  background-color: #7f6f62; */
+  background-color: #80A6A2; */
 }
 
 #content-container {
-  border: solid 1px#7F6F62;
+  border: solid 1px#80A6A2;
   padding: 0px 10px 10px 10px;
   border-radius: 2px;
 }
 
 #content-container h1, p {
-  color: #402d24;
+  color: #595959;
 }
 
 #copyright {
-  color: #402d24;
+  color: #595959;
   text-align: center;
 }
 
