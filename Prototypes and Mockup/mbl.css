@@ -30,10 +30,10 @@
 #mblname h1 {
   color: white;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 60px;
   position: absolute;
-  top: -30px;
-  left: 40px;
+  top: 3%;
+  left: 26.5%;
 }
 
 #lookuplink a, #accountlinks a {
@@ -96,4 +96,9 @@ body {
 #copyright {
   color: #402d24;
   text-align: center;
+}
+
+#main {
+  width: 50%;
+  margin: 0 auto;
 }
