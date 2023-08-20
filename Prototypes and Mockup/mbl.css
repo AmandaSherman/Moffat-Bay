@@ -20,6 +20,7 @@
   height: 60vh;
   margin-bottom: 10px;
   text-align: center;
+  border: solid 1px #595959;
 }
 
 #banner {
