@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <head>
   <link href="./loginsu.css" type="text/css" rel="stylesheet">
 </head>

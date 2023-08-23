@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <head>
   <link href="./loginsu.css" type="text/css" rel="stylesheet">
 </head>
@@ -20,8 +18,6 @@
             if (password_verify($password, $result['password'])) {
                 $_SESSION['userid'] = $result['userid'];
                 echo '<p class="success">Congratulations, you are logged in!</p>';
-                $user = $_SESSION['userid']; ## Remove before final
-                echo "<p class='success'> UserID = $user </p>";  ##Remove before final
             } else {
                 echo '<p class="error">Email address and password combination is incorrect!</p>';
             }
