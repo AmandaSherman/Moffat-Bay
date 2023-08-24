@@ -4,6 +4,8 @@ CREATE DATABASE moffat_bay;
 
 USE moffat_bay;
 
+DROP TABLE IF EXISTS customer;
+
 CREATE TABLE customer (
     customerid INT(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -13,6 +15,7 @@ CREATE TABLE customer (
     password VARCHAR(255) NOT NULL
 );
 
+DROP TABLE IF EXISTS reservation;
 
 CREATE TABLE reservation (
     reservationid INT(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -20,7 +23,7 @@ CREATE TABLE reservation (
     checkin DATE NOT NULL,
     checkout DATE NOT NULL,
     numberguests INT(1) NOT NULL,
-    roomsize VARCHAR(12) NOT NULL
+    roomsize VARCHAR(12) NOT NULL,
     FOREIGN KEY (customerid) REFERENCES customer(customerid)
 );
 

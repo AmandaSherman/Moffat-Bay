@@ -25,7 +25,10 @@
       echo "Please provide an email address or reservation ID.";
     }
     elseif (!$email) {
-      $query = $connection->prepare("SELECT * FROM reservations WHERE reservationid=:reservationid");
+      $query = $connection->prepare("SELECT customer.email, reservation.reservationid, reservation.customerid, reservation.checkin, reservation.checkout, reservation.numberguests, reservation.roomsize 
+      FROM reservation, customer
+      WHERE customer.customerid = reservation.customerid 
+      AND reservation.reservationid=:reservationid");
       $query->bindParam("reservationid", $reservationid, PDO::PARAM_STR);
       $query->execute();
       $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -39,7 +42,10 @@
       }
     }
     elseif (!$reservationid) {
-      $query = $connection->prepare("SELECT * FROM reservations WHERE email=:email");
+      $query = $connection->prepare("SELECT customer.email, reservation.reservationid, reservation.customerid, reservation.checkin, reservation.checkout, reservation.numberguests, reservation.roomsize 
+      FROM reservation, customer
+      WHERE customer.customerid = reservation.customerid 
+      AND customer.email = :email");
       $query->bindParam("email", $email, PDO::PARAM_STR);
       $query->execute();
       $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -53,7 +59,11 @@
       }
     }
     else {
-      $query = $connection->prepare("SELECT * FROM reservations WHERE email=:email AND reservationid=:reservationid");
+      $query = $connection->prepare("SELECT customer.email, reservation.reservationid, reservation.customerid, reservation.checkin, reservation.checkout, reservation.numberguests, reservation.roomsize 
+      FROM reservation, customer
+      WHERE customer.customerid = reservation.customerid
+      AND reservation.reservationid = :reservationid;
+      AND customer.email = :email");
       $query->bindParam("email", $email, PDO::PARAM_STR);
       $query->bindParam("reservationid", $reservationid, PDO::PARAM_STR);
       $query->execute();

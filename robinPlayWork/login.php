@@ -8,7 +8,7 @@
     if (isset($_POST['login'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $query = $connection->prepare("SELECT * FROM useraccounts WHERE email=:email");
+        $query = $connection->prepare("SELECT * FROM customer WHERE email=:email");
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -16,7 +16,7 @@
             echo '<p class="error">Email address and password combination is incorrect!</p>';
         } else {
             if (password_verify($password, $result['password'])) {
-                $_SESSION['userid'] = $result['userid'];
+                $_SESSION['customerid'] = $result['customerid'];
                 echo '<p class="success">Congratulations, you are logged in!</p>';
             } else {
                 echo '<p class="error">Email address and password combination is incorrect!</p>';
