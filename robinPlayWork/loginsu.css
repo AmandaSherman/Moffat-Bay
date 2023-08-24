@@ -37,6 +37,10 @@ form {
 div.form-element {
   margin: 20px 0;
 }
+div.form-element-left {
+  margin: 20px 0;
+  float: left;
+}
 button {
   padding: 10px;
   font-size: 1.5rem;
