@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS moffat_bay;
+
+CREATE DATABASE moffat_bay;
