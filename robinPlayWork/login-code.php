@@ -4,7 +4,13 @@
 
 <?php
     session_start();
-    include('config.php');
+    include('db-config.php');
+
+    function redirect($url) {
+      header('Location: '.$url);
+      die();
+    }
+
     if (isset($_POST['login'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -12,12 +18,14 @@
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
+
         if (!$result) {
             echo '<p class="error">Email address and password combination is incorrect!</p>';
         } else {
             if (password_verify($password, $result['password'])) {
                 $_SESSION['customerid'] = $result['customerid'];
                 echo '<p class="success">Congratulations, you are logged in!</p>';
+                redirect("./landing-page.php");
             } else {
                 echo '<p class="error">Email address and password combination is incorrect!</p>';
             }

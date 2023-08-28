@@ -7,5 +7,5 @@ function redirect($url) {
   die();
 }
 
-redirect("sessionTest.php");
+redirect("./landing-page.php");
 ?>

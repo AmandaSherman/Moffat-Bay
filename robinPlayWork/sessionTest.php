@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include('config.php');
+  include('db-config.php');
   
   if (!array_key_exists('customerid',$_SESSION)) {
     echo "No one is logged in.";
@@ -21,5 +21,6 @@
 
 <br />
 <br />
-<a href="login.php">Log In</a>
-<a href="logout.php">Log Out</a>
+<a href="./login-code.php">Log In</a>
+<a href="./logout-code.php">Log Out</a>
+<a href="./landing-page.php">Landing Page</a>

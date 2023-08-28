@@ -4,7 +4,7 @@
 
 <?php
     session_start();
-    include('config.php');
+    include('db-config.php');
     if (isset($_POST['register'])) {
         $email = $_POST['email'];
         $fname = $_POST['firstname'];
@@ -60,7 +60,8 @@
   </div>
   <div class="form-element">
     <label>Password</label>
-    <input type="password" name="password" placeholder="8 characters minimum" required />
+    <input type="password" name="password" placeholder="8+ chars, 1 upper and 1 lower" 
+    pattern="^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])\S*$" required />
   </div>
   <div class="form-element">
     <label>Confirm Password</label>
