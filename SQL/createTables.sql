@@ -16,6 +16,6 @@ CREATE TABLE reservation (
     checkin DATE NOT NULL,
     checkout DATE NOT NULL,
     numberguests INT(1) NOT NULL,
-    roomsize VARCHAR(12) NOT NULL
+    roomsize VARCHAR(12) NOT NULL,
     FOREIGN KEY (customerid) REFERENCES customer(customerid)
 );
