@@ -37,14 +37,10 @@ button {
   color: white;
 }
 
-p.success,
 p.error {
   color: white;
   font-family: lato;
-  background: yellowgreen;
+  background: orangered;
   display: inline-block;
   padding: 2px 10px;
-}
-p.error {
-  background: orangered;
 }
