@@ -77,8 +77,8 @@
         } else {
             if (password_verify($password, $result['password'])) {
                 $_SESSION['customerid'] = $result['customerid'];
-                echo '<p class="success">Congratulations, you are logged in!</p>';
-                #redirect("./landing-page.php");
+                #echo '<p class="success">Congratulations, you are logged in!</p>';
+                redirect("./landing-page.php");
             } else {
                 echo '<p class="error">Email address and password combination is incorrect!</p>';
             }
