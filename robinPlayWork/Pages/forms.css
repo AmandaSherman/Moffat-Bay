@@ -12,6 +12,16 @@ label {
   text-align: center;
   font-size: 1.5rem;
 }
+
+label.reg {
+  width: 200px;
+  text-align: left;
+}
+
+button.reg {
+  margin: 0 20px;
+}
+
 input {
   border: 1px solid #595959;
   padding: 10px;
@@ -22,11 +32,12 @@ form {
   margin: 25px auto;
   padding: 20px;
   width: 500px;
-  background: #eee;
 }
+
 div.form-element {
   margin: 20px 0;
 }
+
 button {
   padding: 10px;
   font-size: 1.5rem;

@@ -7,6 +7,7 @@
 <head>
   <link href="./mbl.css" type="text/css" rel="stylesheet">
   <link href="./forms.css" type="text/css" rel="stylesheet">
+</head>
 <body>
 
 <div id="main">
@@ -22,7 +23,7 @@
   if (!array_key_exists('customerid',$_SESSION)) {
     echo "<div id=\"accountlinks\">";
     echo "<a href=\"./login-page.php\"><img src=\"./images/iconsolid.png\" width=\"13px\" height=\"13px\">Login</a>";
-    echo "<a href=\"./register-code.php\">Sign Up</a>";
+    echo "<a href=\"./register-page.php\">Sign Up</a>";
     echo "</div>";
   }
   else {
@@ -40,7 +41,7 @@
 ?>
 
 <div id="bannerimage">
-    <img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner">
+<a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
     <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
 </div>
 <div id="navigationbar">
@@ -100,6 +101,7 @@
   </div>
   <button type="submit" name="login" value="login">Log In</button>
   </fieldset>
+</form>
 </div>
 
 <footer>
@@ -110,5 +112,4 @@
 </div>
 
 </body>
-</head>
 </html>

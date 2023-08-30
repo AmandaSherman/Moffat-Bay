@@ -12,7 +12,7 @@
 <div id="main">
 
 <div id="lookuplink">
-  <a href="./reservation-lookup-code.php">Look Up Reservation</a>
+  <a href="../reservation-lookup-code.php">Look Up Reservation</a>
 </div>
 
 <?php
@@ -22,7 +22,7 @@
   if (!array_key_exists('customerid',$_SESSION)) {
     echo "<div id=\"accountlinks\">";
     echo "<a href=\"./login-page.php\"><img src=\"./images/iconsolid.png\" width=\"13px\" height=\"13px\">Login</a>";
-    echo "<a href=\"./register-code.php\">Sign Up</a>";
+    echo "<a href=\"./register-page.php\">Sign Up</a>";
     echo "</div>";
   }
   else {
@@ -40,7 +40,7 @@
 ?>
 
 <div id="bannerimage">
-    <img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner">
+<a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
     <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
 </div>
 <div id="navigationbar">
@@ -69,5 +69,4 @@
 </div>
 
 </body>
-</head>
 </html>

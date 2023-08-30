@@ -17,7 +17,7 @@
 </form>
 
 <?php  
-  include('db-config.php');
+  include('./Pages/db-config.php');
   if (isset($_POST['reservation-lookup'])) {
     $email = $_POST['email'];
     $reservationid = $_POST['reservationid'];
