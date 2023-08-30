@@ -90,8 +90,8 @@
             $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
             $result = $query->execute();
             if ($result) {
-                #echo '<p class="success">Your registration was successful!</p>';
-                redirect("./landing-page.php");
+                echo '<p class="success">Your registration was successful!</p>';
+                echo "<a href=\"login-page.php\" id=\"login\">Log In Now</a>";
             } else {
                 echo '<p class="error">Something went wrong!</p>';
             }
@@ -126,7 +126,7 @@
   <div class="form-element">
     <label class="reg">Telephone</label>
     <input type="tel" name="telephone" 
-      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" />
   </div>
   <div class="form-element">
     <label class="reg">Password *</label>
