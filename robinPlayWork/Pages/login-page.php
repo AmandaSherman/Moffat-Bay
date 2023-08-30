@@ -41,8 +41,8 @@
 ?>
 
 <div id="bannerimage">
-<a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
-    <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
+  <a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
+  <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
 </div>
 <div id="navigationbar">
   <div id="nav1">
@@ -58,7 +58,9 @@
     <a href="#">Contact Us</a>
   </div>
 </div>
+
 <div id="content-container">
+
 <?php
     function redirect($url) {
       header('Location: '.$url);
@@ -102,6 +104,7 @@
   <button type="submit" name="login" value="login">Log In</button>
   </fieldset>
 </form>
+
 </div>
 
 <footer>
