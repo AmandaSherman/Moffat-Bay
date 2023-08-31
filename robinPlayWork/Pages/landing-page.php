@@ -53,9 +53,6 @@
   <div id="nav3">
     <a href="#">About Us</a>
   </div>
-  <div id="nav4">
-    <a href="#">Contact Us</a>
-  </div>
 </div>
 
 <div id="content-container">
