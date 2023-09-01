@@ -99,7 +99,7 @@ body {
 #content-container a {
   color: #595959;
   font-weight: bold;
-  padding-left: 22px;
+  padding: 14px 22px;
   text-decoration-line: underline;
 }
 
@@ -116,8 +116,6 @@ body {
 #content-container {
   color: #595959;
 }
-
-
 
 #copyright {
   color: #595959;
