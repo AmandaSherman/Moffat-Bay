@@ -96,9 +96,28 @@ body {
   border-radius: 2px;
 }
 
-#content-container h1, p {
+#content-container a {
+  color: #595959;
+  font-weight: bold;
+  padding-left: 22px;
+  text-decoration-line: underline;
+}
+
+#content-container a:hover {
+  background-color: #80A6A2;
+  color: #CEC2B8;
+  text-decoration-line: none;
+}
+
+/*#content-container h1, p {
+  color: #595959;
+}*/
+
+#content-container {
   color: #595959;
 }
+
+
 
 #copyright {
   color: #595959;
