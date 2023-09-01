@@ -41,7 +41,7 @@
 </div>
 <div id="navigationbar">
   <div id="nav1">
-    <a href="#">Reserve</a>
+    <a href="./reservation-page.php">Reserve</a>
   </div>
   <div id="nav2">
     <a href="#">Attractions</a>
@@ -71,7 +71,7 @@
   <p>
     Ready to experience the magic of MBL? Reserve your spot today! Our team is here to assist you in planning the perfect vacation.
   </p>
-  <a href="#">Book Now</a>
+  <a href="#">Reserve Now</a>
 
   <h2>Contact Us</h2>
   <p>

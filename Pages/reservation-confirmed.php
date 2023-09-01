@@ -1,7 +1,3 @@
-<!--
-  Robin Pindel
--->
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -13,7 +9,7 @@
 <div id="main">
 
 <div id="lookuplink">
-  <a href="./reservation-lookup-code.php">Look Up Reservation</a>
+  <a href="../reservation-lookup-code.php">Look Up Reservation</a>
 </div>
 
 <?php
@@ -58,49 +54,40 @@
 
 <div id="content-container">
 
-<?php
-    function redirect($url) {
-      header('Location: '.$url);
-      die();
-    }
+<?PHP
+  function redirect($url) {
+    header('Location: '.$url);
+    die();
+  }  
 
-    if (isset($_POST['login'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $query = $connection->prepare("SELECT * FROM customer WHERE email=:email");
-        $query->bindParam("email", $email, PDO::PARAM_STR);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-
-        if (!$result) {
-            echo '<p class="error">Email address and password combination is incorrect!</p>';
-        } else {
-            if (password_verify($password, $result['password'])) {
-                $_SESSION['customerid'] = $result['customerid'];
-                #echo '<p class="success">Congratulations, you are logged in!</p>';
-                redirect("./landing-page.php");
-            } else {
-                echo '<p class="error">Email address and password combination is incorrect!</p>';
-            }
-        }
-    }
+  $checkin = $_POST["checkin"];
+  $checkin = strtotime($checkin);
+  $checkin = date("Y-m-d", $checkin);
+  $checkout = $_POST["checkout"];
+  $checkout = strtotime($checkout);
+  $checkout = date("Y-m-d", $checkout);
+  $numberguests = (int)$_POST["number-guests"];
+  $roomsize = $_POST["room-size"];
+  
+  $query = $connection->prepare("INSERT INTO reservation(customerid,checkin,checkout,numberguests,roomsize) VALUES (:customerid,:checkin,:checkout,:numberguests,:roomsize)");
+  $query->bindParam("customerid", $customerid, PDO::PARAM_STR);
+  $query->bindParam("checkin", $checkin, PDO::PARAM_STR);
+  $query->bindParam("checkout", $checkout, PDO::PARAM_STR);
+  $query->bindParam("numberguests", $numberguests, PDO::PARAM_STR);
+  $query->bindParam("roomsize", $roomsize, PDO::PARAM_STR);
+  $result = $query->execute();
+  if ($result) {
+    echo "<p class=\"success\">Your reservation has been booked successfully!</p>";
+    echo "***Testing*** <br /><br />";
+    echo "Requested check-in date: " . $checkin . "<br /><br />";
+    echo "Requested check-out date: " . $checkout . "<br /><br />";
+    echo "Number of guests on reservation: " . $numberguests . "<br /><br />";
+    echo "Requested room size (beds): " . $roomsize . "<br /><br />";
+  }
+  else {
+    echo '<p class="error">Something went wrong!</p>';
+  }
 ?>
-
-<form method="post" action="" name="signin-form">
-  <fieldset>
-    <legend>LOGIN</legend>
-  <div class="form-element" id="email-input">
-    <label>Email Address</label>
-    <input type="email" name="email" placeholder="Email Address" 
-      placeholder="Email Address" required />
-  </div>
-  <div class="form-element">
-    <label>Password</label>
-    <input type="password" name="password" placeholder="Password" required />
-  </div>
-  <button type="submit" name="login" value="login">Log In</button>
-  </fieldset>
-</form>
 
 </div>
 

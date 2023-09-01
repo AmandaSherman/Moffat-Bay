@@ -46,7 +46,7 @@
 </div>
 <div id="navigationbar">
   <div id="nav1">
-    <a href="#">Reserve</a>
+    <a href="./reservation-page.php">Reserve</a>
   </div>
   <div id="nav2">
     <a href="#">Attractions</a>

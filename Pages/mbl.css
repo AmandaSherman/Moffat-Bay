@@ -126,3 +126,9 @@ body {
   width: 50%;
   margin: 0 auto;
 }
+
+#pricing {
+  border: solid 1px #80A6A2;
+  text-align: left;
+  padding: 20px;
+}
