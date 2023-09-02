@@ -2,14 +2,13 @@
 <html lang="en-us">
 <head>
   <link href="./mbl.css" type="text/css" rel="stylesheet">
-  <link href="./forms.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
 <div id="main">
 
 <div id="lookuplink">
-  <a href="../reservation-lookup-code.php">Look Up Reservation</a>
+  <a href="./reservation-lookup.php">Look Up Reservation</a>
 </div>
 
 <?php
@@ -77,12 +76,13 @@
   $query->bindParam("roomsize", $roomsize, PDO::PARAM_STR);
   $result = $query->execute();
   if ($result) {
+    echo "<br />";
     echo "<p class=\"success\">Your reservation has been booked successfully!</p>";
-    echo "***Testing*** <br /><br />";
+    /*echo "***Testing*** <br /><br />";
     echo "Requested check-in date: " . $checkin . "<br /><br />";
     echo "Requested check-out date: " . $checkout . "<br /><br />";
     echo "Number of guests on reservation: " . $numberguests . "<br /><br />";
-    echo "Requested room size (beds): " . $roomsize . "<br /><br />";
+    echo "Requested room size (beds): " . $roomsize . "<br /><br />";*/
   }
   else {
     echo '<p class="error">Something went wrong!</p>';

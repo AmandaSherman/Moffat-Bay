@@ -8,7 +8,7 @@
 <div id="main">
 
 <div id="lookuplink">
-  <a href="../reservation-lookup-code.php">Look Up Reservation</a>
+  <a href="./reservation-lookup.php">Look Up Reservation</a>
 </div>
 
 <?php
@@ -71,7 +71,7 @@
   <p>
     Ready to experience the magic of MBL? Reserve your spot today! Our team is here to assist you in planning the perfect vacation.
   </p>
-  <a href="#">Reserve Now</a>
+  <a href="./reservation-page.php">Reserve Now</a>
 
   <h2>Contact Us</h2>
   <p>

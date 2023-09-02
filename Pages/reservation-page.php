@@ -2,14 +2,13 @@
 <html lang="en-us">
 <head>
   <link href="./mbl.css" type="text/css" rel="stylesheet">
-  <link href="./forms.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
 <div id="main">
 
 <div id="lookuplink">
-  <a href="../reservation-lookup-code.php">Look Up Reservation</a>
+  <a href="./reservation-lookup.php">Look Up Reservation</a>
 </div>
 
 <?php

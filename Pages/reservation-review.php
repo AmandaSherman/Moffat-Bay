@@ -2,14 +2,13 @@
 <html lang="en-us">
 <head>
   <link href="./mbl.css" type="text/css" rel="stylesheet">
-  <link href="./forms.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
 <div id="main">
 
 <div id="lookuplink">
-  <a href="../reservation-lookup-code.php">Look Up Reservation</a>
+  <a href="./reservation-lookup.php">Look Up Reservation</a>
 </div>
 
 <?php
@@ -79,33 +78,64 @@ else {
   $price = 157.50 * $numbernights;
 }
 
-if ($checkin < $today) {
+if ($checkin < $today && $checkout <= $today) {
   $reservevalid = FALSE;
+  echo "<br /><br />";
+  echo "Check-in date must be equal to today's date or later and check-out date must be after tomorrow or later.<br /><br />";
+  echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
+  echo "<br /><br />";  
+}
+elseif ($checkin < $today) {
+  $reservevalid = FALSE;
+  echo "<br /><br />";
   echo "Check-in date must be equal to today's date or later.<br /><br />";
   echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
+  echo "<br /><br />";
 }
-
-if ($checkout <= $today) {
+elseif ($checkout <= $today) {
   $reservevalid = FALSE;
+  echo "<br /><br />";
   echo "Check-out date must be after tomorrow or later.<br /><br />";
   echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
+  echo "<br /><br />";
 }
 
-if (!$customerid) {
+if (!isset($customerid)) {
   $reservevalid = FALSE;
+  echo "<br /><br />";
   echo "You need an account to make a reservation.<br /><br />";
   echo "<a href=\"./reservation-page.php\"> Please sign up for an account, login, and try again.</a>";
+  echo "<br /><br />";
 }
 
 if ($reservevalid) {
-  echo "***Testing*** <br /><br />";
-  echo "Requested check-in date: " . $checkin . "<br /><br />";
-  echo "Requested check-out date: " . $checkout . "<br /><br />";
-  echo "Number of guests on reservation: " . $numberguests . "<br /><br />";
-  echo "Requested room size (beds): " . $roomsize . "<br /><br />";
-  echo "The reservation cost is: $" . number_format((float)$price, 2, '.', '');
-
 ?>
+
+  <div id="res-review-table">
+    <br /><br />
+    <table>
+      <tr>
+        <td><label>Requested Check-In Date:</label></td>
+        <td><?PHP echo htmlspecialchars($checkin); ?></td>
+      </tr>
+      <tr>
+        <td><label>Requested Check-Out Date:</label></td>
+        <td><?PHP echo htmlspecialchars($checkout); ?></td>
+      </tr>
+      <tr>
+        <td><label>Number of Guests:</label></td>
+        <td><?PHP echo htmlspecialchars($numberguests); ?></td>
+      </tr>
+      <tr>
+        <td><label>Requested Room Size (Beds):</label></td>
+        <td><?PHP echo htmlspecialchars($roomsize); ?></td>
+      </tr>
+      <tr>
+        <td><label>Reservation Cost:</label></td>
+        <td><?PHP echo htmlspecialchars(number_format((float)$price, 2, '.', '')); ?></td>
+      </tr>
+    </table>
+  </div>
 
 <form class="hidden" action="reservation-confirmed.php" method="post">
   <input type="hidden" name="checkin" value="<?PHP echo htmlspecialchars($checkin); ?>" />
