@@ -171,6 +171,10 @@ div#welcome {
   text-align: left;
 }
 
+.lookup-table-layout {
+  display: inline-block;
+}
+
 fieldset {
   color: #595959;
 }
@@ -194,6 +198,7 @@ label.res {
 
 label.lookup {
   width: 40px;
+  font-size: 1.1rem;
 }
 
 input, select {
@@ -222,7 +227,7 @@ button:not(.lookup) {
 }
 
 button.lookup {
-  margin-left: 10px;
+  margin: 5px;
 }
   
 p.error {
