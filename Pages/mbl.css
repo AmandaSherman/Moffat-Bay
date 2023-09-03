@@ -158,9 +158,11 @@ body {
 }
 
 #pricing {
-  border: solid 1px #80A6A2;
+  border: solid 1px #595959;
   text-align: left;
   padding: 20px;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #content-container {
@@ -171,7 +173,7 @@ div#welcome {
   text-align: left;
 }
 
-.lookup-table-layout {
+.table-layout {
   display: inline-block;
 }
 
@@ -191,10 +193,9 @@ label.reg {
   text-align: left;
 }
 
-label.res {
+/*label.res {
   width: 110px;
-
-}
+}*/
 
 label.lookup {
   width: 40px;
@@ -210,7 +211,7 @@ input, select {
 form {
   margin: 25px auto;
   padding: 20px;
-  width: 50%;
+  width: 54%;
 }
 
 div.form-element {
@@ -251,4 +252,17 @@ p.success {
 #login:hover {
   background-color: #80A6A2;
   color: #CEC2B8;
+}
+
+#fields-container {
+  display: inline-block;
+}
+
+.res-fields {
+  width: fit-content;
+}
+
+#res-review-details {
+  width: 54%;
+  margin: 20px auto 0 auto;
 }

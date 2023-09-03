@@ -81,17 +81,17 @@
   <fieldset>
   <legend>Look Up Your Reservation</legend>
   <div id="lookup-table-layout">
-    <div class="lookup-table-layout">
+    <div class="table-layout">
       <input class="lookup" type="email" name="email" placeholder="Email Address" 
       placeholder="Email Address" />
     </div>
-    <div class="lookup-table-layout">
+    <div class="table-layout">
       <label class="lookup">OR</label>
     </div>
-    <div class="lookup-table-layout">
+    <div class="table-layout">
       <input class="lookup" type="text" name="reservationid" placeholder="Reservation ID" /> 
     </div>
-    <div class="lookup-table-layout">  
+    <div class="table-layout">  
       <button class="lookup" type="submit" name="reservation-lookup" value="reservation-lookup"><img src="./images/search-glass.png" name="submit" width="20px" height="20px"></button>
     </div>
   </div>

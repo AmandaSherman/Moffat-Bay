@@ -52,8 +52,8 @@
 </div>
 
 <div id="content-container">
-<div id="res-table">
-  <!--table for reservation-->
+
+<!--<div id="res-table">
   <fieldset>
     <legend>BOOK YOUR VACATION</legend>
     <form action="reservation-review.php" method="post">
@@ -102,7 +102,76 @@
     </ul>
   </div>
   </fieldset>
-</div>
+</div>-->
+
+<!--<div id="res-table">-->
+  <!--table for reservation-->
+  <form action="reservation-review.php" method="post">
+    <fieldset>
+      <legend>BOOK YOUR VACATION</legend>
+    <div id="fields-container">
+      <div class="res-fields">
+        <div>
+          <input type="date" name="checkin" value="xxxx-xx-xx" required>
+        </div>
+        <div>
+          <label class="res">Check-In</label>
+        </div>
+      </div>
+      <div class="res-fields">
+        <div>  
+          <input type="date" name="checkout" value="xxxx-xx-xx" required>
+        </div>
+        <div>
+          <label class="res">Check-Out</label>
+        </div>
+      </div>
+      <div class="res-fields">
+        <div>
+        <select name="number-guests" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        </div>
+        <div>
+          <label class="res">Guests</label>
+        </div>
+      </div>
+      <div class="res-fields">
+        <div>
+        <select name="room-size" required>
+          <option value=""></option>
+          <option value="Double Full">Double Full</option>
+          <option value="Queen">Queen</option>
+          <option value="Double Queen">Double Queen</option>
+          <option value="King">King</option>
+        </select>
+        </div>
+        <div>  
+          <label class="res">Room Size</label>
+        </div>
+      </div>  
+    </div>
+    <div class="form-element">
+      <button type="submit" name="submit" value="submit">Submit</button>
+    </div>    
+    <p>(We'll review the details before the booking is finalized.)</p>
+    </fieldset>
+  </form>
+  <div id="pricing">
+    <h2 class="pricing">Pricing</h2>
+    <p>Pricing is based on the number of guests as part of the reservation.</p>
+    <ul>
+      <li>1 - 2 guests: $120.75 per night</li>
+      <li>3 - 5 guests: $157.50 per night</li>
+      <li><b>Note:</b> 5 guests is the maximum allowed per room per night</li>
+    </ul>
+  </div>
+<!--</div>-->
+
 </div>
 
 <footer>
