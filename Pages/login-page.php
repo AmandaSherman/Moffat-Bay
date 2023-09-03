@@ -89,12 +89,16 @@
   <fieldset>
     <legend>LOGIN</legend>
   <div class="form-element" id="email-input">
-    <label>Email Address</label>
+    <label class="login">Email Address</label>
+  </div>
+  <div class="form-element" id="email-input">
     <input type="email" name="email" placeholder="Email Address" 
       placeholder="Email Address" required />
   </div>
   <div class="form-element">
-    <label>Password</label>
+    <label class="login">Password</label>
+  </div>
+  <div class="form-element">
     <input type="password" name="password" placeholder="Password" required />
   </div>
   <button type="submit" name="login" value="login">Log In</button>

@@ -52,6 +52,7 @@
 </div>
 
 <div id="content-container">
+  <div id="welcome">
   <h1>Welcome to Moffat Bay Lodge (MBL)</h1>
   <p>
     Hi! We are MBL, and we're passionate about creating unforgettable experiences for you. Our mission is to provide you with the ultimate vacation filled with fun and adventure.
@@ -78,6 +79,7 @@
     If you have any questions or need assistance, feel free to get in touch with our friendly team. We're here to make your MBL experience unforgettable.
   </p>
   <a href="#" id=>Contact Us</a>
+  </div>
 </div>
 
 <footer>
