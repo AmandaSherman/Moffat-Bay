@@ -158,13 +158,23 @@ body {
 }
 
 #pricing {
-  border: solid 1px #80A6A2;
+  border: solid 1px #595959;
   text-align: left;
   padding: 20px;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #content-container {
   text-align: center;
+}
+
+div#welcome {
+  text-align: left;
+}
+
+.table-layout {
+  display: inline-block;
 }
 
 fieldset {
@@ -173,22 +183,23 @@ fieldset {
 
 label {
   width: 400px;
-  display: inline-block;
-  text-align: center;
+  /*display: inline-block;*/
   font-size: 1.5rem;
 }
 
 label.reg {
   width: 200px;
+  display: inline-block;
   text-align: left;
 }
 
-label.res {
+/*label.res {
   width: 110px;
-}
+}*/
 
 label.lookup {
   width: 40px;
+  font-size: 1.1rem;
 }
 
 input, select {
@@ -200,7 +211,7 @@ input, select {
 form {
   margin: 25px auto;
   padding: 20px;
-  width: 500px;
+  width: 54%;
 }
 
 div.form-element {
@@ -217,7 +228,7 @@ button:not(.lookup) {
 }
 
 button.lookup {
-  margin-left: 10px;
+  margin: 5px;
 }
   
 p.error {
@@ -241,4 +252,17 @@ p.success {
 #login:hover {
   background-color: #80A6A2;
   color: #CEC2B8;
+}
+
+#fields-container {
+  display: inline-block;
+}
+
+.res-fields {
+  width: fit-content;
+}
+
+#res-review-details {
+  width: 54%;
+  margin: 20px auto 0 auto;
 }

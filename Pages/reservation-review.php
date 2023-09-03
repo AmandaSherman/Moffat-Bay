@@ -104,37 +104,34 @@ if (!isset($customerid)) {
   $reservevalid = FALSE;
   echo "<br /><br />";
   echo "You need an account to make a reservation.<br /><br />";
-  echo "<a href=\"./reservation-page.php\"> Please sign up for an account, login, and try again.</a>";
+  echo "<a href=\"./login-page.php\"> Please sign up for an account, login, and try again.</a>";
   echo "<br /><br />";
 }
 
 if ($reservevalid) {
 ?>
 
-  <div id="res-review-table">
-    <br /><br />
-    <table>
-      <tr>
-        <td><label>Requested Check-In Date:</label></td>
-        <td><?PHP echo htmlspecialchars($checkin); ?></td>
-      </tr>
-      <tr>
-        <td><label>Requested Check-Out Date:</label></td>
-        <td><?PHP echo htmlspecialchars($checkout); ?></td>
-      </tr>
-      <tr>
-        <td><label>Number of Guests:</label></td>
-        <td><?PHP echo htmlspecialchars($numberguests); ?></td>
-      </tr>
-      <tr>
-        <td><label>Requested Room Size (Beds):</label></td>
-        <td><?PHP echo htmlspecialchars($roomsize); ?></td>
-      </tr>
-      <tr>
-        <td><label>Reservation Cost:</label></td>
-        <td><?PHP echo htmlspecialchars(number_format((float)$price, 2, '.', '')); ?></td>
-      </tr>
-    </table>
+  <div id="res-review-details">
+    <div>
+      <label>Requested Check-In Date:</label>
+      &emsp;<?PHP echo htmlspecialchars($checkin); ?>
+    </div>
+    <div>
+      <label>Requested Check-Out Date:</label>
+      &emsp;<?PHP echo htmlspecialchars($checkout); ?>
+    </div>
+    <div> 
+      <label>Number of Guests:</label>
+      &emsp;<?PHP echo htmlspecialchars($numberguests); ?>
+    </div>
+    <div>
+      <label>Requested Room Size (Beds):</label>
+      &emsp;<?PHP echo htmlspecialchars($roomsize); ?>
+    </div>
+    <div>
+      <label>Reservation Cost:</label>
+      &emsp;<?PHP echo htmlspecialchars(number_format((float)$price, 2, '.', '')); ?>
+    </div>
   </div>
 
 <form class="hidden" action="reservation-confirmed.php" method="post">
