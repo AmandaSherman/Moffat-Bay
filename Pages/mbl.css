@@ -116,8 +116,45 @@ body {
 }
 
 #main {
-  width: 50%;
+  width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  #lookuplink {
+    width: 100%;
+    margin: 10px 0; 
+    text-align: center; 
+  }
+
+  #accountlinks {
+    width: 100%;
+    float: none; 
+    text-align: center;
+    margin-top: 10px; 
+  }
+
+  #main {
+    width: 100%; 
+    max-width: 700px; 
+  }
+
+  #mblname h1 {
+    font-size: 2.5em; 
+    text-align: left;
+    margin-top: 20%;
+  }
+
+  #navigationbar {
+    flex-direction: column; 
+  }
+
+  #nav1, #nav2, #nav3, #nav4 {
+    margin: 0; 
+  }
+
+  /* Additional styles for mobile devices */
 }
 
 #pricing {
