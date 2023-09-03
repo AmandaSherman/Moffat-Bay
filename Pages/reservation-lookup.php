@@ -118,9 +118,39 @@
       }
       else {
         echo "<h2>Your Reservation Details</h2>";
-        foreach($result as $item => $detail) {
+        /*foreach($result as $item => $detail) {
           echo "<p>$item = $detail</p>";
+        }*/
+        echo "<label>Email Address:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["email"]);
+        echo "<br />";
+        echo "<label>Reservation ID:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["reservationid"]);
+        echo "<br />";
+        echo "<label>Check-In Date:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["checkin"]);
+        echo "<br />";
+        echo "<label>Check-Out Date:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["checkout"]);
+        echo "<br />";
+        echo "<label>Number of Guests:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["numberguests"]);
+        echo "<br />";
+        echo "<label>Roomsize:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["roomsize"]);
+        echo "<br />";
+        $diffcheckin = date_create($result["checkin"]);
+        $diffcheckout = date_create($result["checkout"]);
+        $interval = date_diff($diffcheckin, $diffcheckout);
+        $numbernights = $interval->format("%a");
+        if ($result["numberguests"] == 1 || $result["numberguests"] == 2) {
+          $price = 120.75 * $numbernights;
         }
+        else {
+          $price = 157.50 * $numbernights;
+        }
+        echo "<label>Cost:</label>";?>&emsp;<?PHP
+        echo "$" . htmlspecialchars($price);
       }
     }
     elseif (!$reservationid) {
@@ -136,9 +166,39 @@
       }
       else {
         echo "<h2>Your Reservation Details</h2>";
-        foreach($result as $item => $detail) {
+        /*foreach($result as $item => $detail) {
           echo "<p>$item = $detail</p>";
+        }*/
+        echo "<label>Email Address:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["email"]);
+        echo "<br />";
+        echo "<label>Reservation ID:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["reservationid"]);
+        echo "<br />";
+        echo "<label>Check-In Date:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["checkin"]);
+        echo "<br />";
+        echo "<label>Check-Out Date:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["checkout"]);
+        echo "<br />";
+        echo "<label>Number of Guests:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["numberguests"]);
+        echo "<br />";
+        echo "<label>Roomsize:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["roomsize"]);
+        echo "<br />";
+        $diffcheckin = date_create($result["checkin"]);
+        $diffcheckout = date_create($result["checkout"]);
+        $interval = date_diff($diffcheckin, $diffcheckout);
+        $numbernights = $interval->format("%a");
+        if ($result["numberguests"] == 1 || $result["numberguests"] == 2) {
+          $price = 120.75 * $numbernights;
         }
+        else {
+          $price = 157.50 * $numbernights;
+        }
+        echo "<label>Cost:</label>";?>&emsp;<?PHP
+        echo "$" . htmlspecialchars($price);
       }
     }
     else {
@@ -156,9 +216,39 @@
       }
       else {
         echo "<h2>Your Reservation Details</h2>";
-        foreach($result as $item => $detail) {
+        /*foreach($result as $item => $detail) {
           echo "<p>$item = $detail</p>";
+        }*/
+        echo "<label>Email Address:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["email"]);
+        echo "<br />";
+        echo "<label>Reservation ID:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["reservationid"]);
+        echo "<br />";
+        echo "<label>Check-In Date:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["checkin"]);
+        echo "<br />";
+        echo "<label>Check-Out Date:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["checkout"]);
+        echo "<br />";
+        echo "<label>Number of Guests:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["numberguests"]);
+        echo "<br />";
+        echo "<label>Roomsize:</label>";?>&emsp;<?PHP
+        echo htmlspecialchars($result["roomsize"]);
+        echo "<br />";
+        $diffcheckin = date_create($result["checkin"]);
+        $diffcheckout = date_create($result["checkout"]);
+        $interval = date_diff($diffcheckin, $diffcheckout);
+        $numbernights = $interval->format("%a");
+        if ($result["numberguests"] == 1 || $result["numberguests"] == 2) {
+          $price = 120.75 * $numbernights;
         }
+        else {
+          $price = 157.50 * $numbernights;
+        }
+        echo "<label>Cost:</label>";?>&emsp;<?PHP
+        echo "$" . htmlspecialchars($price);
       }
     }
   }

@@ -254,7 +254,7 @@ p.success {
   color: #CEC2B8;
 }
 
-#fields-container {
+#fields-container, .res-fields {
   display: inline-block;
 }
 
