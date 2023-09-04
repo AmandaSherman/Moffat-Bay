@@ -75,9 +75,9 @@
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->execute();
         if ($query->rowCount() > 0) {
-            echo '<p class="error">The email address is already registered!</p>';
+          echo '<p class="error">The email address is already registered!</p>';
         }
-        if ($query->rowCount() == 0 && ($password == $confirmpassword)) {
+        elseif ($query->rowCount() == 0 && ($password == $confirmpassword)) {
             $query = $connection->prepare("INSERT INTO customer(email,firstname,
             lastname,telephone,password) VALUES (:email,:firstname,:lastname,:telephone,:password_hash)");
             $query->bindParam("email", $email, PDO::PARAM_STR);
