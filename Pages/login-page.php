@@ -51,7 +51,7 @@
     <a href="#">Attractions</a>
   </div>
   <div id="nav3">
-    <a href="#">About Us</a>
+  <a href="./about-us.php">About Us</a>
   </div>
 </div>
 
