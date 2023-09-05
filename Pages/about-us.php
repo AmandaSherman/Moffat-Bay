@@ -57,27 +57,32 @@
       Welcome to Moffat Bay Lodge (MBL), where adventure meets relaxation. Nestled in the heart of nature, MBL offers you the perfect escape from the everyday hustle and bustle. Our mission is to create lasting memories and provide you with an unforgettable vacation experience.
     </p>
     
-    <h2>Our Story</h2>
-    <p>
-      Moffat Bay Lodge has been a cherished destination for travelers for over a decade. Our journey began with a simple idea: to share the beauty of nature and the joy of adventure with our guests. Over the years, we've grown, evolved, and embraced the unique character of the lodge.
-    </p>
+    <h2>About Moffat Bay Lodge (MBL)</h2>
+<p>
+  Six months ago, the San Juan Islands First Nations Development Committee approved the construction of a resort and marina at Moffat Bay on Joviedsa Island. The construction of both the lodge and marina is now in its final stages, and we're excited to be a part of this project.
+</p>
 
-    <h2>What Sets Us Apart</h2>
-    <p>
-      At MBL, we take pride in offering a one-of-a-kind experience. Here's what sets us apart:
-    </p>
-    <ul>
-      <li>Idyllic Location: Our lodge is situated in a pristine natural setting, surrounded by breathtaking landscapes, lush forests, and serene lakes.</li>
-      <li>Adventure Awaits: Whether you're an outdoor enthusiast or looking to unwind, we offer a wide range of activities, from hiking and fishing to stargazing by the campfire.</li>
-      <li>Luxury Meets Comfort: Our accommodations are thoughtfully designed to provide you with the perfect blend of luxury and coziness, ensuring a relaxing stay.</li>
-      <li>Personalized Service: Our friendly and knowledgeable staff are dedicated to making your stay truly memorable, assisting you every step of the way.</li>
-    </ul>
+<p>
+  At Moffat Bay Lodge (MBL), we've been entrusted with the responsibility of completing one of the two projects required before the facilities open to the public. Our mission is to ensure that the lodge or marina, depending on your choice, is ready to offer a remarkable experience for our guests.
+</p>
 
-    <h2>Join Us in Creating Memories</h2>
-    <p>
-      We invite you to be part of the MBL experience. Whether you're planning a family vacation, a romantic getaway, or an adventure with friends, Moffat Bay Lodge is here to make it extraordinary.
-    </p>
-    <a href="./reservation-page.php">Book Your Stay</a>
+<h2>Why Choose MBL?</h2>
+<p>
+  At MBL, we're committed to excellence and sustainability. Here are some reasons to choose us for your next project:
+</p>
+<ul>
+  <li>San Juan Islands Beauty: Our location on Joviedsa Island offers a stunning natural backdrop, with breathtaking views of the San Juan Islands.</li>
+  <li>Quality Craftsmanship: We take pride in our attention to detail and commitment to delivering a high-quality resort or marina.</li>
+  <li>Community and Culture: We embrace the heritage and culture of the San Juan Islands First Nations, making your project a part of this rich history.</li>
+  <li>Project Partnership: We work closely with our clients to ensure your vision becomes a reality, meeting your project goals and timelines.</li>
+</ul>
+
+<h2>Partner with Us</h2>
+<p>
+  We invite you to partner with Moffat Bay Lodge on your upcoming resort or marina project. Whether you're seeking excellence in design, construction, or sustainable development, we're here to make your project a success.
+</p>
+<a href="./contact-us.php">Contact Us</a>
+
   </div>
 </div>
 
