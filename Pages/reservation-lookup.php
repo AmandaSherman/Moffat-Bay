@@ -169,10 +169,10 @@ Robin Pindel
         $query->bindParam("numberguests", $numberguests, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
-        $price = $result['cost'];
+        $price = $numbernights * $result['cost'];
 
         echo "<label>Cost:</label>";?>&emsp;<?PHP
-        echo "$" . htmlspecialchars($price);
+        echo "$" . htmlspecialchars(number_format((float)$price, 2, '.', ''));
       }
     }
     elseif (!$reservationid) {

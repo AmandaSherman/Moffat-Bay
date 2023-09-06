@@ -87,7 +87,7 @@ $query = $connection->prepare("SELECT cost FROM price WHERE numberguests=:number
     $query->bindParam("numberguests", $numberguests, PDO::PARAM_STR);
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
-    $price = $result['cost'];
+    $price = $numbernights *$result['cost'];
 
 if (!isset($customerid)) {
   $reservevalid = FALSE;
@@ -153,8 +153,7 @@ if ($reservevalid) {
     </div>
     <div>
       <label>Reservation Cost:</label>
-      <!-- &emsp;<?PHP echo htmlspecialchars(number_format((float)$price, 2, '.', '')); ?> -->
-      &emsp;<?PHP echo "$" . htmlspecialchars($price); ?>
+      &emsp;<?PHP echo "$" . htmlspecialchars(number_format((float)$price, 2, '.', '')); ?>
     </div>
   </div>
 
