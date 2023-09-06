@@ -79,7 +79,6 @@
 <a href="./reservation-page.php">Book Your Stay</a>
   </div>
 </div>
-
 <footer>
   <p id="copyright">Copyright &copy; <?php echo date("Y"); ?> Moffat Bay Lodge</p>
 </footer>

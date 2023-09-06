@@ -81,7 +81,6 @@
   <a href="#" id=>Contact Us</a>
   </div>
 </div>
-
 <footer>
   <p id="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script>
     Moffat Bay Lodge</p>
