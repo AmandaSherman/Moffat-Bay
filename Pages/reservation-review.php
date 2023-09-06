@@ -62,6 +62,7 @@
 <?PHP
 
 $reservevalid = TRUE;
+date_default_timezone_set("America/Los_Angeles");
 $today = date("Y-m-d");
 $checkin = $_POST["checkin"];
 $checkout = $_POST["checkout"];
@@ -78,34 +79,46 @@ else {
   $price = 157.50 * $numbernights;
 }
 
-if ($checkin < $today && $checkout <= $today) {
-  $reservevalid = FALSE;
-  echo "<br /><br />";
-  echo "Check-in date must be equal to today's date or later and check-out date must be after tomorrow or later.<br /><br />";
-  echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
-  echo "<br /><br />";  
-}
-elseif ($checkin < $today) {
-  $reservevalid = FALSE;
-  echo "<br /><br />";
-  echo "Check-in date must be equal to today's date or later.<br /><br />";
-  echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
-  echo "<br /><br />";
-}
-elseif ($checkout <= $today) {
-  $reservevalid = FALSE;
-  echo "<br /><br />";
-  echo "Check-out date must be after tomorrow or later.<br /><br />";
-  echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
-  echo "<br /><br />";
-}
-
 if (!isset($customerid)) {
   $reservevalid = FALSE;
   echo "<br /><br />";
   echo "You need an account to make a reservation.<br /><br />";
   echo "<a href=\"./login-page.php\"> Please sign up for an account, login, and try again.</a>";
   echo "<br /><br />";
+}
+else {
+  // Checks both checkin and checkout against today's date together
+  if ($checkin < $today && $checkout <= $today) {
+    $reservevalid = FALSE;
+    echo "<br /><br />";
+    echo "Check-in date must be equal to today's date or later and check-out date must be tomorrow or later.<br /><br />";
+    echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
+    echo "<br /><br />";  
+  }
+  // Confirms checkin is not less than today's date
+  elseif ($checkin < $today) {
+    $reservevalid = FALSE;
+    echo "<br /><br />";
+    echo "Check-in date must be equal to today's date or later.<br /><br />";
+    echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
+    echo "<br /><br />";
+  }
+  elseif ($checkout == $today) {
+  // Confirms checkout is not today's date
+    $reservevalid = FALSE;
+    echo "<br /><br />";
+    echo "Check-out date must be tomorrow or later.<br /><br />";
+    echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
+    echo "<br /><br />";
+  }
+  elseif (($numbernights == 0) || !($checkout > $checkin)) {
+  // Confirms checkin and checkout are not the same date and that checkout date is after checkin date
+    $reservevalid = FALSE;
+    echo "<br /><br />";
+    echo "Check-out date must be greater than check-in date.<br /><br />";
+    echo "<a href=\"./reservation-page.php\">Please go back and correct the issue.  Thank you.</a>";
+    echo "<br /><br />";
+  }
 }
 
 if ($reservevalid) {
