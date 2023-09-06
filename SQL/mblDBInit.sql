@@ -37,9 +37,9 @@ CREATE TABLE price (
 INSERT INTO customer
     (email, firstname, lastname, telephone, password)
     VALUES 
-        ('amanda@mbl.com', 'Amanda', 'Sherman', '123-456-7890', 'hashedpassword'),
-        ('caleb@mbl.com', 'Caleb', 'Rummel', '123-456-7890', 'hashedpassword'),
-        ('karendaysu@mbl.com', 'Karendaysu', 'Wolfe', '123-456-7890', 'hashedpassword'),
+        ('amanda@mbl.com', 'Amanda', 'Sherman', '123-456-7890', '$2y$10$EhSeXXouCeEeRUWoZQ1kdOO14dgvesrj0AH1T1UFllBR0wvMlqenS'),
+        ('caleb@mbl.com', 'Caleb', 'Rummel', '123-456-7890', '$2y$10$EhSeXXouCeEeRUWoZQ1kdOO14dgvesrj0AH1T1UFllBR0wvMlqenS'),
+        ('karendaysu@mbl.com', 'Karendaysu', 'Wolfe', '123-456-7890', '$2y$10$EhSeXXouCeEeRUWoZQ1kdOO14dgvesrj0AH1T1UFllBR0wvMlqenS'),
         ('robin@mbl.com', 'Robin', 'Pindel', '123-456-7890', '$2y$10$EhSeXXouCeEeRUWoZQ1kdOO14dgvesrj0AH1T1UFllBR0wvMlqenS');
 
 INSERT INTO reservation
