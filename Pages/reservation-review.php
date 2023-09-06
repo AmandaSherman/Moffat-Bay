@@ -72,12 +72,22 @@ $interval = date_diff($diffcheckin, $diffcheckout);
 $numbernights = $interval->format("%a");
 $numberguests = $_POST["number-guests"];
 $roomsize = $_POST["room-size"];
-if ($numberguests == 1 || $numberguests == 2) {
+
+## Commenting out to try database pricing versus hardcoding in application code
+/*if ($numberguests == 1 || $numberguests == 2) {
   $price = 120.75 * $numbernights;
 }
 else {
   $price = 157.50 * $numbernights;
-}
+}*/
+
+## Database query version of price checking
+$price;
+$query = $connection->prepare("SELECT cost FROM price WHERE numberguests=:numberguests");
+    $query->bindParam("numberguests", $numberguests, PDO::PARAM_STR);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $price = $result['cost'];
 
 if (!isset($customerid)) {
   $reservevalid = FALSE;
@@ -143,7 +153,8 @@ if ($reservevalid) {
     </div>
     <div>
       <label>Reservation Cost:</label>
-      &emsp;<?PHP echo htmlspecialchars(number_format((float)$price, 2, '.', '')); ?>
+      <!-- &emsp;<?PHP echo htmlspecialchars(number_format((float)$price, 2, '.', '')); ?> -->
+      &emsp;<?PHP echo "$" . htmlspecialchars($price); ?>
     </div>
   </div>
 
