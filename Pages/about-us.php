@@ -77,8 +77,28 @@
   We invite you to experience the magic of Moffat Bay Lodge (MBL). Whether you're planning a family vacation, a romantic getaway, or an adventure with friends, we're here to make it extraordinary.
 </p>
 <a href="./reservation-page.php">Book Your Stay</a>
+
+<!-- Insert the contact form here -->
+<form action="send-email.php" method="post">
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required>
+  <br>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" required></textarea>
+  <br>
+  <input type="submit" value="Send">
+</form>
+<!-- End of the contact form -->
+
   </div>
 </div>
+
 <footer>
   <p id="copyright">Copyright &copy; <?php echo date("Y"); ?> Moffat Bay Lodge</p>
 </footer>
