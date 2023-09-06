@@ -78,7 +78,8 @@
 </p>
 <a href="./reservation-page.php">Book Your Stay</a>
 
-<!-- Insert the contact form here -->
+<h2>Contact Us</h2>
+
 <form action="send-email.php" method="post">
   <label for="name">Full Name:</label>
   <input type="text" id="name" name="name" required>
@@ -94,7 +95,7 @@
   <br>
   <input type="submit" value="Send">
 </form>
-<!-- End of the contact form -->
+
 
   </div>
 </div>
