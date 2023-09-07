@@ -99,20 +99,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!--Large chunks of contact form were taken from https://www.w3schools.com/howto/howto_css_contact_form.asp-->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
+
   <label for="fname">First Name</label>
-  <input type="text" id="fname" name="firstname" required pattern="^[A-Za-z\s]+$" title="Please enter a valid first name (letters and spaces only)">
+  <input type="text" id="fname" name="firstname" required pattern="^[A-Za-z\s]+$" title="Please enter a valid first name (letters and spaces only)" placeholder="John">
 
   <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lastname" required pattern="^[A-Za-z\s]+$" title="Please enter a valid last name (letters and spaces only)">
+  <input type="text" id="lname" name="lastname" required pattern="^[A-Za-z\s]+$" title="Please enter a valid last name (letters and spaces only)" placeholder="Doe">
 
   <label for="email">Email</label>
-  <input type="email" id="email" name="email" required>
+  <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
 
-  <label for="phone">Phone Number (with dashes)</label>
-  <input type="tel" id="phone" name="phone" required pattern="^\d{3}-\d{3}-\d{4}$" title="Please enter a phone number in the format: 123-456-7890">
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" required pattern="^\d{3}-\d{3}-\d{4}$" title="Please enter a phone number in the format: 123-456-7890" placeholder="123-456-7890">
 
   <label for="message">Message</label>
-  <textarea id="message" name="message" style="height:200px" required></textarea>
+  <textarea id="message" name="message" style="height:200px" required placeholder="Enter your message here"></textarea>
 
   <input type="submit" value="Submit">
 
