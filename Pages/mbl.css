@@ -276,7 +276,9 @@ p.success {
   margin: 20px auto 0 auto;
 }
 
- /* Style inputs with type="text", select elements and textareas */
+/*Large chunks of contact form were taken from https://www.w3schools.com/howto/howto_css_contact_form.asp*/ 
+
+/* Style inputs with type="text", select elements and textareas */
  input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 

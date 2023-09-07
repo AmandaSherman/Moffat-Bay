@@ -90,6 +90,7 @@ Robin Pindel
 
 <h2>Contact Us</h2>
 
+<!--Large chunks of contact form were taken from https://www.w3schools.com/howto/howto_css_contact_form.asp-->
 <form action="send-email.php" method="post">
 
   <label for="fname">First Name</label>
