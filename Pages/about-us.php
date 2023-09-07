@@ -90,20 +90,26 @@ Robin Pindel
 
 <h2>Contact Us</h2>
 
+<!--Large chunks of contact form were taken from https://www.w3schools.com/howto/howto_css_contact_form.asp-->
 <form action="send-email.php" method="post">
-  <label for="name">Full Name:</label>
-  <input type="text" id="name" name="name" required>
-  <br>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  <br>
-  <label for="phone">Phone Number:</label>
-  <input type="tel" id="phone" name="phone" required>
-  <br>
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" rows="4" required></textarea>
-  <br>
-  <input type="submit" value="Send">
+
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="firstname" require>
+
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lastname" require>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" require>
+
+  <label for="lname">Phone Number</label>
+  <input type="tel" id="phone" name="phone" require>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" style="height:200px"></textarea>
+
+  <input type="submit" value="Submit">
+
 </form>
 
 
