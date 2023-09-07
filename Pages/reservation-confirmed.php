@@ -1,3 +1,13 @@
+<!-- 
+CSD 460 Capstone Project
+Orange Group 2023
+Amanda Sherman
+Caleb Rummel
+Karendaysu Wolfe
+Robin Pindel
+-->
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -76,8 +86,20 @@
   $query->bindParam("roomsize", $roomsize, PDO::PARAM_STR);
   $result = $query->execute();
   if ($result) {
+    ## Database query for reservationID
+    $price;
+    $query = $connection->prepare("SELECT reservationid FROM reservation WHERE customerid=:customerid AND checkin=:checkin AND checkout=:checkout AND roomsize=:roomsize AND numberguests=:numberguests");
+    $query->bindParam("customerid", $customerid, PDO::PARAM_STR);
+    $query->bindParam("checkin", $checkin, PDO::PARAM_STR);
+    $query->bindParam("checkout", $checkout, PDO::PARAM_STR);
+    $query->bindParam("roomsize", $roomsize, PDO::PARAM_STR);
+    $query->bindParam("numberguests", $numberguests, PDO::PARAM_STR);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $reservationid = $result['reservationid'];
     echo "<br />";
     echo "<p class=\"success\">Your reservation has been booked successfully!</p>";
+    echo "<p class=\"success\">You reservation ID is " . $reservationid . "</p>";
     /*echo "***Testing*** <br /><br />";
     echo "Requested check-in date: " . $checkin . "<br /><br />";
     echo "Requested check-out date: " . $checkout . "<br /><br />";

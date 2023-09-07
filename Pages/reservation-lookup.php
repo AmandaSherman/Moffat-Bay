@@ -1,3 +1,13 @@
+<!-- 
+CSD 460 Capstone Project
+Orange Group 2023
+Amanda Sherman
+Caleb Rummel
+Karendaysu Wolfe
+Robin Pindel
+-->
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -143,14 +153,26 @@
         $diffcheckout = date_create($result["checkout"]);
         $interval = date_diff($diffcheckin, $diffcheckout);
         $numbernights = $interval->format("%a");
-        if ($result["numberguests"] == 1 || $result["numberguests"] == 2) {
+
+        ## Commenting out to try database pricing versus hardcoding in application code
+        /*if ($result["numberguests"] == 1 || $result["numberguests"] == 2) {
           $price = 120.75 * $numbernights;
         }
         else {
           $price = 157.50 * $numbernights;
-        }
+        }*/
+
+        ## Database query version of price checking
+        $price;
+        $numberguests = $result["numberguests"];
+        $query = $connection->prepare("SELECT cost FROM price WHERE numberguests=:numberguests");
+        $query->bindParam("numberguests", $numberguests, PDO::PARAM_STR);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        $price = $numbernights * $result['cost'];
+
         echo "<label>Cost:</label>";?>&emsp;<?PHP
-        echo "$" . htmlspecialchars($price);
+        echo "$" . htmlspecialchars(number_format((float)$price, 2, '.', ''));
       }
     }
     elseif (!$reservationid) {

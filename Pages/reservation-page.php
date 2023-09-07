@@ -1,3 +1,13 @@
+<!-- 
+CSD 460 Capstone Project
+Orange Group 2023
+Amanda Sherman
+Caleb Rummel
+Karendaysu Wolfe
+Robin Pindel
+-->
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -159,7 +169,6 @@
       <button type="submit" name="submit" value="submit">Submit</button>
     </div>    
     <p>(We'll review the details before the booking is finalized.)</p>
-    </fieldset>
   </form>
   <div id="pricing">
     <h2 class="pricing">Pricing</h2>
@@ -170,6 +179,7 @@
       <li><b>Note:</b> 5 guests is the maximum allowed per room per night</li>
     </ul>
   </div>
+  </fieldset>
 <!--</div>-->
 
 </div>

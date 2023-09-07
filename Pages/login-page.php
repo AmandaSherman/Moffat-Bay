@@ -1,6 +1,12 @@
-<!--
-  Robin Pindel
+<!-- 
+CSD 460 Capstone Project
+Orange Group 2023
+Amanda Sherman
+Caleb Rummel
+Karendaysu Wolfe
+Robin Pindel
 -->
+
 
 <!DOCTYPE html>
 <html lang="en-us">
