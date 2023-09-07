@@ -90,23 +90,29 @@ Robin Pindel
 
 <h2>Contact Us</h2>
 
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "<p style='color: green;'>Message Sent</p>";
+}
+?>
+
 <!--Large chunks of contact form were taken from https://www.w3schools.com/howto/howto_css_contact_form.asp-->
-<form action="send-email.php" method="post">
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
   <label for="fname">First Name</label>
-  <input type="text" id="fname" name="firstname" require>
+  <input type="text" id="fname" name="firstname" required pattern="^[A-Za-z\s]+$" title="Please enter a valid first name (letters and spaces only)">
 
   <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lastname" require>
+  <input type="text" id="lname" name="lastname" required pattern="^[A-Za-z\s]+$" title="Please enter a valid last name (letters and spaces only)">
 
   <label for="email">Email</label>
-  <input type="email" id="email" name="email" require>
+  <input type="email" id="email" name="email" required>
 
-  <label for="lname">Phone Number</label>
-  <input type="tel" id="phone" name="phone" require>
+  <label for="phone">Phone Number (with dashes)</label>
+  <input type="tel" id="phone" name="phone" required pattern="^\d{3}-\d{3}-\d{4}$" title="Please enter a phone number in the format: 123-456-7890">
 
   <label for="message">Message</label>
-  <textarea id="message" name="message" style="height:200px"></textarea>
+  <textarea id="message" name="message" style="height:200px" required></textarea>
 
   <input type="submit" value="Submit">
 
