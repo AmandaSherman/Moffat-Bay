@@ -5,6 +5,8 @@ Amanda Sherman
 Caleb Rummel
 Karendaysu Wolfe
 Robin Pindel
+
+Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-form--cms-33261t.
 -->
 
 

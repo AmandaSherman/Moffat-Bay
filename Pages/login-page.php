@@ -5,6 +5,8 @@ Amanda Sherman
 Caleb Rummel
 Karendaysu Wolfe
 Robin Pindel
+
+Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-form--cms-33261t.
 -->
 
 
@@ -99,7 +101,7 @@ Robin Pindel
   </div>
   <div class="form-element" id="email-input">
     <input type="email" name="email" placeholder="Email Address" 
-      placeholder="Email Address" required />
+      placeholder="Email Address" id="login-email" required />
   </div>
   <div class="form-element">
     <label class="login">Password</label>
