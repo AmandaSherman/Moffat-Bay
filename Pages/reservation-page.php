@@ -138,7 +138,7 @@ Robin Pindel
       </div>
       <div class="res-fields">
         <div>
-        <select name="number-guests" required>
+        <select name="number-guests" id="res-guests" required>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -152,7 +152,7 @@ Robin Pindel
       </div>
       <div class="res-fields">
         <div>
-        <select name="room-size" required>
+        <select name="room-size" id="res-room" required>
           <option value=""></option>
           <option value="Double Full">Double Full</option>
           <option value="Queen">Queen</option>

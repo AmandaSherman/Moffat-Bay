@@ -5,6 +5,8 @@ Amanda Sherman
 Caleb Rummel
 Karendaysu Wolfe
 Robin Pindel
+
+Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-form--cms-33261t.
 -->
 
 
@@ -116,19 +118,19 @@ Robin Pindel
     <legend>ACCOUNT SIGN UP</legend>
   <div class="form-element">
     <label class="reg">Email Address *</label>
-    <input type="email" name="email" placeholder="test@domain.com" required />
+    <input type="email" name="email" placeholder="test@domain.com" class="register-fields" required />
   </div>
   <div class="form-element">
     <label class="reg">First Name *</label>
-    <input type="text" name="firstname" placeholder="i.e. John" required />
+    <input type="text" name="firstname" placeholder="i.e. John" class="register-fields" required />
   </div>
   <div class="form-element">
     <label class="reg">Last Name *</label>
-    <input type="text" name="lastname" placeholder="i.e. Smith" required />
+    <input type="text" name="lastname" placeholder="i.e. Smith" class="register-fields" required />
   </div>
   <div class="form-element">
     <label class="reg">Telephone</label>
-    <input type="tel" name="telephone" 
+    <input type="tel" name="telephone" class="register-fields"
       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" />
   </div>
   <div class="form-element">
