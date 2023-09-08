@@ -88,8 +88,16 @@ Robin Pindel
 </p>
 <a href="./reservation-page.php">Book Your Stay</a>
 
-<h2>Contact Us</h2>
 
+
+<div id="contact-info">
+  <p><strong>Moffat Bay Lodge</strong></p>
+  <p>4668 Cattle Point Rd, Friday Harbor, WA 98250</p>
+  <p>(360) 378-2240</p>
+  <p>info@moffatbaylodge.com</p>
+</div>
+
+<h2>Contact Us Here:</h2>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p style='color: green;'>Message Sent</p>";

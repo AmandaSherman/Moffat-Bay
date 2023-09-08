@@ -169,6 +169,16 @@ body {
   /* Additional styles for mobile devices */
 }
 
+#contact-info {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#contact-info p {
+  margin: 5px 0;
+}
+
 #pricing {
   border: solid 1px #595959;
   text-align: left;
