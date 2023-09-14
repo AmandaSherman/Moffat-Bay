@@ -25,6 +25,7 @@ Robin Pindel
   session_start();
   include('db-config.php');
   
+  // Set logged-in username at top of screen based on session details
   if (!array_key_exists('customerid',$_SESSION)) {
     echo "<div id=\"accountlinks\">";
     echo "<a href=\"./login-page.php\"><img src=\"./images/iconsolid.png\" width=\"13px\" height=\"13px\">Login</a>";
@@ -63,29 +64,6 @@ Robin Pindel
 
 <div id="content-container">
 
-<!--<form name="reservation-lookup-form" action="" method ="post">
-  <fieldset>
-  <legend>Look Up Your Reservation</legend>
-  <table id="#res-lookup">
-    <tr>
-      <td>
-        <input class="lookup" type="email" name="email" placeholder="Email Address" 
-        placeholder="Email Address" />
-      </td>    
-      <td>
-        <label class="lookup">OR</label>
-      </td>
-      <td>
-        <input class="lookup" type="text" name="reservationid" placeholder="Reservation ID" /> 
-      </td>
-      <td>
-        <button class="lookup" type="submit" name="reservation-lookup" value="reservation-lookup"><img src="./images/search-glass.png" name="submit" width="26px" height="26px"></button>
-      </td> 
-    </tr>
-  </table>
-  </fieldset>
-</form>-->
-
 <!-- Responsive design removes table layout and uses divs-->
 <form name="reservation-lookup-form" action="" method ="post">
   <fieldset>
@@ -113,9 +91,9 @@ Robin Pindel
     $email = $_POST['email'];
     $reservationid = $_POST['reservationid'];
     if (!$email && !$reservationid) {
-      echo "<br />Please provide an email address or reservation ID.";
+      echo "<br />Please provide an email address or reservation ID."; // User must provide either an email address, reservation id, or both
     }
-    elseif (!$email) {
+    elseif (!$email) { // Reservation lookup using reservation id
       $query = $connection->prepare("SELECT customer.email, reservation.reservationid, reservation.customerid, reservation.checkin, reservation.checkout, reservation.numberguests, reservation.roomsize 
       FROM reservation, customer
       WHERE customer.customerid = reservation.customerid 
@@ -128,9 +106,6 @@ Robin Pindel
       }
       else {
         echo "<h2>Your Reservation Details</h2>";
-        /*foreach($result as $item => $detail) {
-          echo "<p>$item = $detail</p>";
-        }*/
         echo "<label>Email Address:</label>";?>&emsp;<?PHP
         echo htmlspecialchars($result["email"]);
         echo "<br />";
@@ -154,15 +129,7 @@ Robin Pindel
         $interval = date_diff($diffcheckin, $diffcheckout);
         $numbernights = $interval->format("%a");
 
-        ## Commenting out to try database pricing versus hardcoding in application code
-        /*if ($result["numberguests"] == 1 || $result["numberguests"] == 2) {
-          $price = 120.75 * $numbernights;
-        }
-        else {
-          $price = 157.50 * $numbernights;
-        }*/
-
-        ## Database query version of price checking
+        // Database query version of price checking
         $price;
         $numberguests = $result["numberguests"];
         $query = $connection->prepare("SELECT cost FROM price WHERE numberguests=:numberguests");
@@ -175,22 +142,62 @@ Robin Pindel
         echo "$" . htmlspecialchars(number_format((float)$price, 2, '.', ''));
       }
     }
-    elseif (!$reservationid) {
+    elseif (!$reservationid) {  // Reservation lookup using email address
       $query = $connection->prepare("SELECT customer.email, reservation.reservationid, reservation.customerid, reservation.checkin, reservation.checkout, reservation.numberguests, reservation.roomsize 
       FROM reservation, customer
       WHERE customer.customerid = reservation.customerid 
       AND customer.email = :email");
       $query->bindParam("email", $email, PDO::PARAM_STR);
       $query->execute();
-      $result = $query->fetch(PDO::FETCH_ASSOC);
+      //$result = $query->fetch(PDO::FETCH_ASSOC);  // Single reservation returned for email address search
+      $result = $query->fetchAll(PDO::FETCH_ASSOC);
+      $rowCount = $query->rowCount();
+
       if (!$result) {
         echo '<br /><p class="error">There is no reservation with this email address.</p>';
       }
       else {
         echo "<h2>Your Reservation Details</h2>";
-        /*foreach($result as $item => $detail) {
-          echo "<p>$item = $detail</p>";
-        }*/
+        for ($i = 0; $i <= ($rowCount - 1); $i++) {
+          echo "<label>Email Address:</label>";?>&emsp;<?PHP
+          echo htmlspecialchars($result[$i]["email"]);
+          echo "<br />";
+          echo "<label>Reservation ID:</label>";?>&emsp;<?PHP
+          echo htmlspecialchars($result[$i]["reservationid"]);
+          echo "<br />";
+          echo "<label>Check-In Date:</label>";?>&emsp;<?PHP
+          echo htmlspecialchars($result[$i]["checkin"]);
+          echo "<br />";
+          echo "<label>Check-Out Date:</label>";?>&emsp;<?PHP
+          echo htmlspecialchars($result[$i]["checkout"]);
+          echo "<br />";
+          echo "<label>Number of Guests:</label>";?>&emsp;<?PHP
+          echo htmlspecialchars($result[$i]["numberguests"]);
+          echo "<br />";
+          echo "<label>Roomsize:</label>";?>&emsp;<?PHP
+          echo htmlspecialchars($result[$i]["roomsize"]);
+          echo "<br />";
+          $diffcheckin = date_create($result[$i]["checkin"]);
+          $diffcheckout = date_create($result[$i]["checkout"]);
+          $interval = date_diff($diffcheckin, $diffcheckout);
+          $numbernights = $interval->format("%a");
+          if ($result[$i]["numberguests"] == 1 || $result[$i]["numberguests"] == 2) {
+            $price = 120.75 * $numbernights;
+          }
+          else {
+            $price = 157.50 * $numbernights;
+          }
+          echo "<label>Cost:</label>";?>&emsp;<?PHP
+          echo "$" . htmlspecialchars(number_format((float)$price, 2, '.', ''));
+          echo "<br /><br />";
+        }
+      } 
+      // Result display for email address search that only returns the first row
+      /*if (!$result) {
+        echo '<br /><p class="error">There is no reservation with this email address.</p>';
+      }
+      else {
+        echo "<h2>Your Reservation Details</h2>";
         echo "<label>Email Address:</label>";?>&emsp;<?PHP
         echo htmlspecialchars($result["email"]);
         echo "<br />";
@@ -221,7 +228,7 @@ Robin Pindel
         }
         echo "<label>Cost:</label>";?>&emsp;<?PHP
         echo "$" . htmlspecialchars($price);
-      }
+      }*/
     }
     else {
       $query = $connection->prepare("SELECT customer.email, reservation.reservationid, reservation.customerid, reservation.checkin, reservation.checkout, reservation.numberguests, reservation.roomsize 
@@ -238,9 +245,6 @@ Robin Pindel
       }
       else {
         echo "<h2>Your Reservation Details</h2>";
-        /*foreach($result as $item => $detail) {
-          echo "<p>$item = $detail</p>";
-        }*/
         echo "<label>Email Address:</label>";?>&emsp;<?PHP
         echo htmlspecialchars($result["email"]);
         echo "<br />";
@@ -270,7 +274,7 @@ Robin Pindel
           $price = 157.50 * $numbernights;
         }
         echo "<label>Cost:</label>";?>&emsp;<?PHP
-        echo "$" . htmlspecialchars($price);
+        echo "$" . htmlspecialchars(number_format((float)$price, 2, '.', ''));
       }
     }
   }
