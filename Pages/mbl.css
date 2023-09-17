@@ -194,6 +194,15 @@ div#welcome {
   text-align: left;
 }
 
+
+#welcome {
+  background-image: url('images/SalishSalmonBlack.ai');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+
 .table-layout {
   display: inline-block;
 }
