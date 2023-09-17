@@ -186,21 +186,18 @@ body {
   margin: 0 auto;
 }
 
-#content-container {
-  text-align: center;
-}
-
 div#welcome {
   text-align: left;
 }
 
 
-#welcome {
+#content-container {
   background-image: url('images/SalishSalmonBlack.ai');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
+  text-align: center;
 }
 
 .table-layout {
