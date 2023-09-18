@@ -62,39 +62,49 @@ Robin Pindel
 
 <div id="content-container">
   <div id="attractions">
-  <h1>Attractions at Moffat Bay Lodge (MBL)</h1>
-  <p>
-    Discover the myriad of attractions that MBL has to offer! From serene nature trails to exhilarating water sports, there's something for everyone.
-  </p>
-  
-  <h2>Nature and Adventure</h2>
-  <p>
-    Immerse yourself in the beauty of nature and the thrill of adventure at MBL. Here are some of the attractions you can enjoy:
-  </p>
-  <ul>
-    <li>Guided Nature Walks: Explore the scenic beauty of Moffat Bay with our experienced guides.</li>
-    <li>Water Sports: Kayaking, canoeing, and paddleboarding on the pristine waters of the bay.</li>
-    <li>Mountain Biking: Navigate through challenging terrains and enjoy breathtaking views.</li>
-  </ul>
+    <h1>Attractions at Moffat Bay Lodge</h1>
+    <p>Discover the myriad of attractions that MBL has to offer! From serene nature trails to exhilarating water sports, there's something for everyone.</p>
 
-  <h2>Relaxation and Wellness</h2>
-  <p>
-    Looking for a more relaxed experience? MBL offers a range of wellness and relaxation attractions:
-  </p>
-  <ul>
-    <li>Spa and Wellness Center: Indulge in rejuvenating treatments and massages.</li>
-    <li>Yoga and Meditation Sessions: Find your inner peace amidst the serene surroundings.</li>
-    <li>Beachside Lounging: Relax on our private beach and soak in the sun.</li>
-  </ul>
+    <!-- Hiking -->
+    <div class="attraction-box">
+      <div class="attraction-title">
+        Hiking
+        <img src="./images/hiking.jpg" alt="Hiking Image" class="attraction-image">
+      </div>
+      <div class="attraction-info">Guided Nature Walks: Explore the scenic beauty of Moffat Bay with our experienced guides.</div>
+    </div>
 
-  <h2>Local Attractions</h2>
-  <p>
-    Venture out and explore the local attractions around Moffat Bay. From local markets to cultural landmarks, there's plenty to see and do.
-  </p>
-  <a href="./reservation-page.php" id=>Reserve Now</a>
+    <!-- Kayaking -->
+    <div class="attraction-box">
+      <div class="attraction-title">
+        Kayaking
+        <img src="./images/kayaking.jpg" alt="Kayaking Image" class="attraction-image">
+      </div>
+      <div class="attraction-info">Water Sports: Kayaking, canoeing, and paddleboarding on the pristine waters of the bay.</div>
+    </div>
 
+    <!-- Whale Watching -->
+    <div class="attraction-box">
+      <div class="attraction-title">
+        Whale Watching
+        <img src="./images/whale-watching.jpg" alt="Whale Watching Image" class="attraction-image">
+      </div>
+      <div class="attraction-info">Experience the majestic beauty of whales in their natural habitat. A must-see attraction for nature lovers.</div>
+    </div>
+
+    <!-- Scuba Diving -->
+    <div class="attraction-box">
+      <div class="attraction-title">
+        Scuba Diving
+        <img src="./images/scuba-diving.jpg" alt="Scuba Diving Image" class="attraction-image">
+      </div>
+      <div class="attraction-info">Dive deep into the waters of Moffat Bay and discover a vibrant underwater world.</div>
+    </div>
+
+    <a href="./reservation-page.php" id="reserve-now">Reserve Now</a>
   </div>
 </div>
+
 <footer>
   <p id="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script>
     Moffat Bay Lodge</p>
