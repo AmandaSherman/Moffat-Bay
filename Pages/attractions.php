@@ -5,10 +5,7 @@ Amanda Sherman
 Caleb Rummel
 Karendaysu Wolfe
 Robin Pindel
-
-Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-form--cms-33261t.
 -->
-
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -56,7 +53,7 @@ Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-for
     <a href="./reservation-page.php">Reserve</a>
   </div>
   <div id="nav2">
-  <a href="./attractions.php">Attractions</a>
+    <a href="./attractions.php">Attractions</a>
   </div>
   <div id="nav3">
   <a href="./about-us.php">About Us</a>
@@ -64,57 +61,40 @@ Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-for
 </div>
 
 <div id="content-container">
+  <div id="attractions">
+  <h1>Attractions at Moffat Bay Lodge (MBL)</h1>
+  <p>
+    Discover the myriad of attractions that MBL has to offer! From serene nature trails to exhilarating water sports, there's something for everyone.
+  </p>
+  
+  <h2>Nature and Adventure</h2>
+  <p>
+    Immerse yourself in the beauty of nature and the thrill of adventure at MBL. Here are some of the attractions you can enjoy:
+  </p>
+  <ul>
+    <li>Guided Nature Walks: Explore the scenic beauty of Moffat Bay with our experienced guides.</li>
+    <li>Water Sports: Kayaking, canoeing, and paddleboarding on the pristine waters of the bay.</li>
+    <li>Mountain Biking: Navigate through challenging terrains and enjoy breathtaking views.</li>
+  </ul>
 
-<?php
-    function redirect($url) {
-      header('Location: '.$url);
-      die();
-    }
+  <h2>Relaxation and Wellness</h2>
+  <p>
+    Looking for a more relaxed experience? MBL offers a range of wellness and relaxation attractions:
+  </p>
+  <ul>
+    <li>Spa and Wellness Center: Indulge in rejuvenating treatments and massages.</li>
+    <li>Yoga and Meditation Sessions: Find your inner peace amidst the serene surroundings.</li>
+    <li>Beachside Lounging: Relax on our private beach and soak in the sun.</li>
+  </ul>
 
-    if (isset($_POST['login'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $query = $connection->prepare("SELECT * FROM customer WHERE email=:email");
-        $query->bindParam("email", $email, PDO::PARAM_STR);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
+  <h2>Local Attractions</h2>
+  <p>
+    Venture out and explore the local attractions around Moffat Bay. From local markets to cultural landmarks, there's plenty to see and do.
+  </p>
+  <a href="./reservation-page.php" id=>Reserve Now</a>
 
-        if (!$result) {
-            echo '<p class="error">Email address and password combination is incorrect!</p>';
-        } else {
-            if (password_verify($password, $result['password'])) {
-                $_SESSION['customerid'] = $result['customerid'];
-                #echo '<p class="success">Congratulations, you are logged in!</p>';
-                redirect("./landing-page.php");
-            } else {
-                echo '<p class="error">Email address and password combination is incorrect!</p>';
-            }
-        }
-    }
-?>
-
-<form method="post" action="" name="signin-form">
-  <fieldset>
-    <legend>LOGIN</legend>
-  <div class="form-element" id="email-input">
-    <label class="login">Email Address</label>
   </div>
-  <div class="form-element" id="email-input">
-    <input type="email" name="email" placeholder="Email Address" 
-      placeholder="Email Address" id="login-email" required />
-  </div>
-  <div class="form-element">
-    <label class="login">Password</label>
-  </div>
-  <div class="form-element">
-    <input type="password" name="password" placeholder="Password" required />
-  </div>
-  <button type="submit" name="login" value="login">Log In</button>
-  </fieldset>
-</form>
-
 </div>
-
 <footer>
   <p id="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script>
     Moffat Bay Lodge</p>

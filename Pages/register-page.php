@@ -56,7 +56,7 @@ Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-for
     <a href="./reservation-page.php">Reserve</a>
   </div>
   <div id="nav2">
-    <a href="#">Attractions</a>
+  <a href="./attractions.php">Attractions</a>
   </div>
   <div id="nav3">
   <a href="./about-us.php">About Us</a>
