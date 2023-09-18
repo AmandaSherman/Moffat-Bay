@@ -7,7 +7,6 @@ Karendaysu Wolfe
 Robin Pindel
 -->
 
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -54,7 +53,7 @@ Robin Pindel
     <a href="./reservation-page.php">Reserve</a>
   </div>
   <div id="nav2">
-  <a href="./attractions.php">Attractions</a>
+    <a href="./attractions.php">Attractions</a>
   </div>
   <div id="nav3">
   <a href="./about-us.php">About Us</a>
@@ -62,33 +61,38 @@ Robin Pindel
 </div>
 
 <div id="content-container">
-  <div id="welcome">
-  <h1>Welcome to Moffat Bay Lodge (MBL)</h1>
+  <div id="attractions">
+  <h1>Attractions at Moffat Bay Lodge (MBL)</h1>
   <p>
-    Hi! We are MBL, and we're passionate about creating unforgettable experiences for you. Our mission is to provide you with the ultimate vacation filled with fun and adventure.
+    Discover the myriad of attractions that MBL has to offer! From serene nature trails to exhilarating water sports, there's something for everyone.
   </p>
   
-  <h2>Why Choose MBL?</h2>
+  <h2>Nature and Adventure</h2>
   <p>
-    At MBL, we pride ourselves on offering the perfect blend of relaxation and excitement. Here are some reasons to choose us for your next getaway:
+    Immerse yourself in the beauty of nature and the thrill of adventure at MBL. Here are some of the attractions you can enjoy:
   </p>
   <ul>
-    <li>Stunning Natural Beauty: Our lodge is nestled in the heart of nature, surrounded by breathtaking landscapes.</li>
-    <li>Adventure Awaits: Whether you're into hiking, fishing, or simply unwinding by the lake, there's something here for everyone.</li>
-    <li>Comfort and Luxury: Our accommodations are designed with your comfort in mind, ensuring a cozy stay.</li>
+    <li>Guided Nature Walks: Explore the scenic beauty of Moffat Bay with our experienced guides.</li>
+    <li>Water Sports: Kayaking, canoeing, and paddleboarding on the pristine waters of the bay.</li>
+    <li>Mountain Biking: Navigate through challenging terrains and enjoy breathtaking views.</li>
   </ul>
 
-  <h2>Book Your Stay</h2>
+  <h2>Relaxation and Wellness</h2>
   <p>
-    Ready to experience the magic of MBL? Reserve your spot today! Our team is here to assist you in planning the perfect vacation.
+    Looking for a more relaxed experience? MBL offers a range of wellness and relaxation attractions:
   </p>
-  <a href="./reservation-page.php">Reserve Now</a>
+  <ul>
+    <li>Spa and Wellness Center: Indulge in rejuvenating treatments and massages.</li>
+    <li>Yoga and Meditation Sessions: Find your inner peace amidst the serene surroundings.</li>
+    <li>Beachside Lounging: Relax on our private beach and soak in the sun.</li>
+  </ul>
 
-  <h2>Contact Us</h2>
+  <h2>Local Attractions</h2>
   <p>
-    If you have any questions or need assistance, feel free to get in touch with our friendly team. We're here to make your MBL experience unforgettable.
+    Venture out and explore the local attractions around Moffat Bay. From local markets to cultural landmarks, there's plenty to see and do.
   </p>
-  <a href="#" id=>Contact Us</a>
+  <a href="./reservation-page.php" id=>Reserve Now</a>
+
   </div>
 </div>
 <footer>
