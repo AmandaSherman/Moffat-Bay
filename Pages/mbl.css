@@ -190,6 +190,14 @@ div#welcome {
   text-align: left;
 }
 
+/**/
+
+div#attractions > h1, p {
+  text-align: left;
+}
+
+
+/**/
 
 #content-container {
   background-image: url('images/SalishSalmonBlack.png');
@@ -354,6 +362,7 @@ input[type=submit]:hover {
 
 .attraction-title, .attraction-info {
   border: 1px solid #ccc;
+  /* border: solid 1px #595959;  To give a little more pop?  We can remove if no one else agrees :-) */
   padding: 10px;
   margin-right: 10px; /* This ensures separation between title and info boxes */
 }
@@ -368,10 +377,14 @@ input[type=submit]:hover {
   flex: 3;
 }
 
+.attraction-info li {
+  text-align: left;
+}
+
 /* Styles for the images in the title boxes */
 .attraction-image {
   display: block; /* Make the image a block element so it appears below the text */
-  width: 50px; 
-  height: 50px; 
+  width: 200px; /* Originally 50 */
+  height: 125px; /* Originally 50 */
   margin: 10px auto; /* Centers the image */
 }
