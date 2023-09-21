@@ -345,3 +345,33 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #595959;
 }
+
+/* For the Attractions page */
+.attraction-box {
+  display: flex;
+  margin-bottom: 30px; /* This ensures separation between each attraction group */
+}
+
+.attraction-title, .attraction-info {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px; /* This ensures separation between title and info boxes */
+}
+
+.attraction-title {
+  flex: 1;
+  font-weight: bold;
+  text-align: center; /* Center the text and image */
+}
+
+.attraction-info {
+  flex: 3;
+}
+
+/* Styles for the images in the title boxes */
+.attraction-image {
+  display: block; /* Make the image a block element so it appears below the text */
+  width: 50px; 
+  height: 50px; 
+  margin: 10px auto; /* Centers the image */
+}
