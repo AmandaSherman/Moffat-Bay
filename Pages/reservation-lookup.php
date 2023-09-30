@@ -234,7 +234,7 @@ Robin Pindel
       $query = $connection->prepare("SELECT customer.email, reservation.reservationid, reservation.customerid, reservation.checkin, reservation.checkout, reservation.numberguests, reservation.roomsize 
       FROM reservation, customer
       WHERE customer.customerid = reservation.customerid
-      AND reservation.reservationid = :reservationid;
+      AND reservation.reservationid = :reservationid
       AND customer.email = :email");
       $query->bindParam("email", $email, PDO::PARAM_STR);
       $query->bindParam("reservationid", $reservationid, PDO::PARAM_STR);
