@@ -91,10 +91,10 @@ Robin Pindel
 
 
 <div id="contact-info">
-  <p><strong>Moffat Bay Lodge</strong></p>
-  <p>4668 Cattle Point Rd, Friday Harbor, WA 98250</p>
-  <p>(360) 378-2240</p>
-  <p>info@moffatbaylodge.com</p>
+  <p class="contact"><strong>Moffat Bay Lodge</strong></p>
+  <p class="contact">4668 Cattle Point Rd, Friday Harbor, WA 98250</p>
+  <p class="contact">(360) 378-2240</p>
+  <p class="contact">info@moffatbaylodge.com</p>
 </div>
 
 <h2>Contact Us Here:</h2>
