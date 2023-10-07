@@ -96,6 +96,7 @@ Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-for
             $result = $query->execute();
             if ($result) {
                 echo '<p class="success">Your registration was successful!</p>';
+                echo "<br /><br />";
                 echo "<a href=\"login-page.php\" id=\"login\">Log In Now</a>";
             } else {
                 echo '<p class="error">Something went wrong!</p>';

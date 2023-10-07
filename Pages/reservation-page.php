@@ -24,6 +24,15 @@ Robin Pindel
 <?php
   session_start();
   include('db-config.php');
+
+  if (!array_key_exists('customerid',$_SESSION)){
+    function redirect($url) {
+      header('Location: '.$url);
+      die();
+    }  
+
+    redirect("./login-page.php#content-container");
+  }
   
   if (!array_key_exists('customerid',$_SESSION)) {
     echo "<div id=\"accountlinks\">";
