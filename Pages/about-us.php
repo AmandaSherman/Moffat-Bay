@@ -98,11 +98,14 @@ Robin Pindel
 </div>
 
 <h2>Contact Us Here:</h2>
+<div id="msg-sent">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "<p style='color: green;'>Message Sent</p>";
+    //echo "<p style='color: green;'>Message Sent</p>
+    echo "<p class=\"success\" id=\"msg-sent\">Message Sent</p>";
 }
 ?>
+</div>
 
 <!--Large chunks of contact form were taken from https://www.w3schools.com/howto/howto_css_contact_form.asp-->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
