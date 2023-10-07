@@ -27,9 +27,17 @@ Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-for
   margin: 10px 0 10px 0;
 }
 
-#bannerimage {
+#homebannerimage {
   width: 100%;
   height: 60vh;
+  margin-bottom: 10px;
+  text-align: center;
+  border: solid 1px #595959;
+}
+
+#bannerimage {
+  width: 100%;
+  height: 20vh;
   margin-bottom: 10px;
   text-align: center;
   border: solid 1px #595959;
