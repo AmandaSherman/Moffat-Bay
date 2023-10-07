@@ -404,3 +404,7 @@ input[type=submit]:hover {
 .contact {
   text-align: center;
 }
+
+#msg-sent {
+  text-align: center;
+}
