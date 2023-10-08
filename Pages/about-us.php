@@ -45,8 +45,8 @@ Robin Pindel
 ?>
 
 <div id="bannerimage">
-  <a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
-  <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
+  <a href="./landing-page.php"><img src="./images/mbl2.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
+  <a href="./landing-page.php"><div id="mblname"><h1>Moffat Bay Lodge</h1></div></a>
 </div>
 <div id="navigationbar">
   <div id="nav1">
@@ -62,18 +62,18 @@ Robin Pindel
 
 <div id="content-container">
   <div id="welcome">
-    <h1>About Moffat Bay Lodge (MBL)</h1>
+    <h1>About Moffat Bay Lodge</h1>
 <p>
-  Moffat Bay Lodge (MBL) is your gateway to the stunning beauty of the San Juan Islands. Situated on Joviedsa Island, our lodge is part of a visionary project approved by the San Juan Islands First Nations Development Committee six months ago. The construction of both the lodge and marina is now in its final stages, and we're thrilled to be a part of this exciting development.
+  Moffat Bay Lodge is your gateway to the stunning beauty of the San Juan Islands. Situated on Joviedsa Island, our lodge is part of a visionary project approved by the San Juan Islands First Nations Development Committee six months ago. The construction of both the lodge and marina is now in its final stages, and we're thrilled to be a part of this exciting development.
 </p>
 
 <p>
   At Moffat Bay Lodge, we've been entrusted with the responsibility of completing one of the two projects required before the facilities open to the public. Our mission is to ensure that the lodge is ready to offer a remarkable experience for our guests.
 </p>
 
-<h2>Why Choose MBL?</h2>
+<h2>Why Choose Moffat Bay Lodge?</h2>
 <p>
-  Choosing Moffat Bay Lodge (MBL) for your San Juan Islands adventure is choosing excellence, sustainability, and cultural richness. Here are some reasons to make us your home away from home:
+  Choosing Moffat Bay Lodge for your San Juan Islands adventure is choosing excellence, sustainability, and cultural richness. Here are some reasons to make us your home away from home:
 </p>
 <ul>
   <li>San Juan Islands Beauty: Our location on Joviedsa Island offers a stunning natural backdrop, with breathtaking views of the San Juan Islands.</li>
@@ -84,7 +84,7 @@ Robin Pindel
 
 <h2>Your San Juan Islands Retreat</h2>
 <p>
-  We invite you to experience the magic of Moffat Bay Lodge (MBL). Whether you're planning a family vacation, a romantic getaway, or an adventure with friends, we're here to make it extraordinary.
+  We invite you to experience the magic of Moffat Bay Lodge. Whether you're planning a family vacation, a romantic getaway, or an adventure with friends, we're here to make it extraordinary.
 </p>
 <a href="./reservation-page.php">Book Your Stay</a>
 
@@ -98,11 +98,14 @@ Robin Pindel
 </div>
 
 <h2>Contact Us Here:</h2>
+<div id="msg-sent">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "<p style='color: green;'>Message Sent</p>";
+    //echo "<p style='color: green;'>Message Sent</p>
+    echo "<p class=\"success\" id=\"msg-sent\">Message Sent</p>";
 }
 ?>
+</div>
 
 <!--Large chunks of contact form were taken from https://www.w3schools.com/howto/howto_css_contact_form.asp-->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

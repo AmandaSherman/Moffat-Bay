@@ -45,9 +45,9 @@ Robin Pindel
   }
 ?>
 
-<div id="bannerimage">
+<div id="homebannerimage">
   <a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
-  <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
+  <a href="./landing-page.php"><div id="mblname"><h1>Moffat Bay Lodge</h1></div></a>
 </div>
 <div id="navigationbar">
   <div id="nav1">
@@ -63,14 +63,14 @@ Robin Pindel
 
 <div id="content-container">
   <div id="welcome">
-  <h1>Welcome to Moffat Bay Lodge (MBL)</h1>
+  <h1>Welcome to Moffat Bay Lodge</h1>
   <p>
-    Hi! We are MBL, and we're passionate about creating unforgettable experiences for you. Our mission is to provide you with the ultimate vacation filled with fun and adventure.
+    Hi! We are Moffat Bay Lodge, and we're passionate about creating unforgettable experiences for you. Our mission is to provide you with the ultimate vacation filled with fun and adventure.
   </p>
   
-  <h2>Why Choose MBL?</h2>
+  <h2>Why Choose Moffat Bay Lodge?</h2>
   <p>
-    At MBL, we pride ourselves on offering the perfect blend of relaxation and excitement. Here are some reasons to choose us for your next getaway:
+    At Moffat Bay Lodge, we pride ourselves on offering the perfect blend of relaxation and excitement. Here are some reasons to choose us for your next getaway:
   </p>
   <ul>
     <li>Stunning Natural Beauty: Our lodge is nestled in the heart of nature, surrounded by breathtaking landscapes.</li>
@@ -80,15 +80,15 @@ Robin Pindel
 
   <h2>Book Your Stay</h2>
   <p>
-    Ready to experience the magic of MBL? Reserve your spot today! Our team is here to assist you in planning the perfect vacation.
+    Ready to experience the magic of Moffat Bay Lodge? Reserve your spot today! Our team is here to assist you in planning the perfect vacation.
   </p>
   <a href="./reservation-page.php">Reserve Now</a>
 
   <h2>Contact Us</h2>
   <p>
-    If you have any questions or need assistance, feel free to get in touch with our friendly team. We're here to make your MBL experience unforgettable.
+    If you have any questions or need assistance, feel free to get in touch with our friendly team. We're here to make your Moffat Bay Lodge experience unforgettable.
   </p>
-  <a href="#" id=>Contact Us</a>
+  <a href="./about-us.php#contact-info" id=>Contact Us</a>
   </div>
 </div>
 <footer>

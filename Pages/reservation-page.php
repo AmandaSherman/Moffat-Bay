@@ -24,6 +24,15 @@ Robin Pindel
 <?php
   session_start();
   include('db-config.php');
+
+  if (!array_key_exists('customerid',$_SESSION)){
+    function redirect($url) {
+      header('Location: '.$url);
+      die();
+    }  
+
+    redirect("./login-page.php#content-container");
+  }
   
   if (!array_key_exists('customerid',$_SESSION)) {
     echo "<div id=\"accountlinks\">";
@@ -46,8 +55,8 @@ Robin Pindel
 ?>
 
 <div id="bannerimage">
-  <a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
-  <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
+  <a href="./landing-page.php"><img src="./images/mbl2.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
+  <a href="./landing-page.php"><div id="mblname"><h1>Moffat Bay Lodge</h1></div></a>
 </div>
 <div id="navigationbar">
   <div id="nav1">

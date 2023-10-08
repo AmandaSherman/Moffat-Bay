@@ -48,8 +48,8 @@ Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-for
 ?>
 
 <div id="bannerimage">
-  <a href="./landing-page.php"><img src="./images/mbl1.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
-  <div id="mblname"><h1>Moffat Bay Lodge</h1></div>
+  <a href="./landing-page.php"><img src="./images/mbl2.jpeg" alt="Moffat Bay Lodge image" id="banner"></a>
+  <a href="./landing-page.php"><div id="mblname"><h1>Moffat Bay Lodge</h1></div></a>
 </div>
 <div id="navigationbar">
   <div id="nav1">
@@ -96,6 +96,7 @@ Groundwork code referenced from https://code.tutsplus.com/create-a-php-login-for
             $result = $query->execute();
             if ($result) {
                 echo '<p class="success">Your registration was successful!</p>';
+                echo "<br /><br />";
                 echo "<a href=\"login-page.php\" id=\"login\">Log In Now</a>";
             } else {
                 echo '<p class="error">Something went wrong!</p>';
